@@ -485,6 +485,40 @@ public class Patient extends Person {
             listToString("Plans", plans, plansCount);
     }
 
+    // ---------------- equals ----------------
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof Patient)) return false;
 
+        Patient other = (Patient) obj;
+
+        return super.equals(other) &&
+                this.admissionDate.equals(other.admissionDate) &&
+                this.dischargeDate.equals(other.dischargeDate) &&
+                this.lOI.equals(other.lOI) &&
+                this.cardiologyTeam.equals(other.cardiologyTeam) &&
+                this.diagnosis.equals(other.diagnosis) &&
+                this.hx.equals(other.hx) &&
+                this.allergy.equals(other.allergy) &&
+                this.cardiacSxComplications.equals(other.cardiacSxComplications) &&
+                this.cardiacRhythm.equals(other.cardiacRhythm) &&
+                this.ventilationStatus.equals(other.ventilationStatus) &&
+                this.ivAccess.equals(other.ivAccess) &&
+                this.nutrition.equals(other.nutrition) &&
+                this.drainsDrgs.equals(other.drainsDrgs) &&
+                this.elimination.equals(other.elimination) &&
+                this.mobility.equals(other.mobility) &&
+                this.walkList.equals(other.walkList) &&
+                this.followSW == other.followSW &&
+                this.followPT == other.followPT &&
+                this.followOT == other.followOT &&
+                this.homeSituation.equals(other.homeSituation) &&
+                this.dcPlan.equals(other.dcPlan) &&
+                this.testsCount == other.testsCount &&
+                this.labsCount == other.labsCount &&
+                this.rxCount == other.rxCount &&
+                this.issuesCount == other.issuesCount &&
+                this.plansCount == other.plansCount;
+    }
 
 }
