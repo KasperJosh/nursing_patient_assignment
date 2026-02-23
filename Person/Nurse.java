@@ -5,7 +5,7 @@ package Person;
 public class Nurse extends Person {
 
     private String hospitalID;
-    private int oiiqID;
+    private String oiiqID;
     private int yearsExperience;
     private int maxPatients;
     private int currentLoad;
@@ -16,14 +16,14 @@ public class Nurse extends Person {
         
         super();  // calls Person default constructor
         this.hospitalID = "";
-        this.oiiqID = 0;
+        this.oiiqID = "";
         this.yearsExperience = 0;
         this.maxPatients = 5;   // default stepdown ratio
         this.currentLoad = 0;
     }
     
     // Parameterized constructor
-    public Nurse(String firstName, String lastName, int age, String gender, String hospitalID, int oiiqID,
+    public Nurse(String firstName, String lastName, int age, String gender, String hospitalID, String oiiqID,
                  int yearsExperience, int maxPatients) {
 
         super(firstName, lastName, age, gender); // calls Person parameterized constructor
@@ -55,11 +55,11 @@ public class Nurse extends Person {
         this.hospitalID = hospitalID;
     }
 
-    public int getOiiqID() {
+    public String getOiiqID() {
         return oiiqID;
     }
 
-    public void setOiiqID(int oiiqID) {
+    public void setOiiqID(String oiiqID) {
         this.oiiqID = oiiqID;
     }
 
