@@ -39,7 +39,7 @@ public class MainDriver {
             //Cases 
             switch(choice){
                 case 1:
-                    addNurse(input, unit)
+                    addNurse(input, unit);
             }
         }
     }
